@@ -27,10 +27,12 @@ function refaire() {
 }
 
 function suivant() {
-    jeux.efface()
-    jeux.fin()
-    niv = [Niveaux.niv1, Niveaux.niv2, Niveaux.niv3, Niveaux.niv4, Niveaux.niv5, Niveaux.niv6, Niveaux.niv7, Niveaux.niv8, Niveaux.niv9]
-    nivA++
-    jeux = new Jeux(ctx, niv[nivA], canvas, messageP)
-    jeux.main()
+    if(nivA<8){
+        jeux.efface()
+        jeux.fin()
+        niv = [Niveaux.niv1, Niveaux.niv2, Niveaux.niv3, Niveaux.niv4, Niveaux.niv5, Niveaux.niv6, Niveaux.niv7, Niveaux.niv8, Niveaux.niv9]
+        nivA++
+        jeux = new Jeux(ctx, niv[nivA], canvas, messageP)
+        jeux.main()
+    }
 }
